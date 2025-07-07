@@ -353,18 +353,22 @@ void showSettingsMenu() {
         outtextxy(250, 180, "搜索深度:");
         char buf[64];
         sprintf(buf, "%d", settings.searchDepth);
-        outtextxy(350, 180, buf);
+        outtextxy(390, 180, buf);
         drawButton(incDepthBtn);
         drawButton(decDepthBtn);
 
         // 候选半径 —— 水平对齐
+        settextstyle(30, 0, "宋体");
+        settextcolor(BLACK);
         outtextxy(250, 240, "候选半径:");
         sprintf(buf, "%d", settings.candRange);
-        outtextxy(350, 240, buf);
+        outtextxy(390, 240, buf);
         drawButton(incRangeBtn);
         drawButton(decRangeBtn);
 
         // 悔棋开关 —— 水平对齐
+        settextstyle(30, 0, "宋体");
+        settextcolor(BLACK);
         outtextxy(250, 300, "悔棋:");
         outtextxy(350, 300, settings.enableUndo ? "启用" : "禁用");
         drawButton(toggleUndoBtn);
